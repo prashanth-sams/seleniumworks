@@ -1,8 +1,7 @@
-package specs;
+package demo.specs;
 
 import org.openqa.selenium.By;
-import org.seleniumworks.utilities.Controllers;
-//import org.seleniumworks.utilities.Controllers;
+import org.seleniumworks.utilities.Base_Controller;
 import org.testng.annotations.*;
 import org.testng.Assert;
 
@@ -10,7 +9,7 @@ import org.testng.Assert;
  * Author - Prashanth Sams [seleniumworks] 
  */
 
-public class Home extends Controllers {
+public class Home extends Base_Controller {
 
 	@Test(description = "Welcome Page")
 	public void Test01() throws Exception {		

@@ -5,7 +5,7 @@
 	<test name="Test on Firefox">
 		<parameter name="browser" value="Firefox" />
 		<classes>
-			<class name="specs.Home" />
+			<class name="demo.specs.Home" />
 		</classes>
 	</test>
 

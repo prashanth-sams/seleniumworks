@@ -12,7 +12,7 @@ import org.testng.annotations.Parameters;
 
 import java.util.concurrent.TimeUnit;
 
-public abstract class Controllers {
+public abstract class Base_Controller {
 
 	public WebDriver driver;
 
