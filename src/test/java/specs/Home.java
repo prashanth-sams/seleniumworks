@@ -19,8 +19,7 @@ public class Home {
 	@BeforeTest
 	public void setUp() throws Exception {
 		driver = new FirefoxDriver();
-//		baseUrl = "http://www.practiceselenium.com";
-		baseUrl = "http://www.google.com";
+		baseUrl = "http://www.practiceselenium.com";		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
