@@ -34,10 +34,10 @@
 						<version>2.12.2</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>testng.xml</suiteXmlFile>
+								<suiteXmlFile>org/test/resources/testng.xml</suiteXmlFile>
 							</suiteXmlFiles>
 							<includes>
-								<include>**/*Test.java</include>
+								<include>**/*ome.java</include>
 							</includes>
 						</configuration>
 					</plugin>

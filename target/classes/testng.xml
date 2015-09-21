@@ -6,7 +6,7 @@
     <test name="Test on Firefox">
         <!-- <parameter name="browser" value="Chrome"/> -->
         <classes>
-            <class name="org.seleniumworks.Home"/>            
+            <class name="org.seleniumworks.AppTest"/>            
         </classes>
     </test>
 
