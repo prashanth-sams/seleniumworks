@@ -5,12 +5,22 @@
 package demo.pages;
 
 import org.openqa.selenium.By;
-import org.seleniumworks.utilities.BaseController;
+import org.openqa.selenium.WebDriver;
 
-public class Welcome extends BaseController{
+public class Welcome {
 
+	public WebDriver driver;
+	
+	public Welcome(WebDriver driver){
+		this.driver = driver;
+	}
+	
 	public String Title(){
 		return driver.getTitle();
+	}
+	
+	public String Header(){
+		return driver.findElement(By.cssSelector("h1")).getText();
 	}
 	
 	public void HerbalTea(){
