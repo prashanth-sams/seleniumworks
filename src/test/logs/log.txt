@@ -1,0 +1,58 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building seleniumworks 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ seleniumworks ---
+[INFO] Deleting D:\SeleniumWorks\workspace_git\seleniumworks\target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.060s
+[INFO] Finished at: Wed Sep 23 23:35:00 IST 2015
+[INFO] Final Memory: 3M/15M
+[INFO] ------------------------------------------------------------------------
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building seleniumworks 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ seleniumworks ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\SeleniumWorks\workspace_git\seleniumworks\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ seleniumworks ---
+[INFO] Compiling 1 source file to D:\SeleniumWorks\workspace_git\seleniumworks\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ seleniumworks ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ seleniumworks ---
+[INFO] Compiling 8 source files to D:\SeleniumWorks\workspace_git\seleniumworks\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.2:test (default-test) @ seleniumworks ---
+[INFO] Surefire report directory: D:\SeleniumWorks\workspace_git\seleniumworks\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+log4j:WARN No appenders could be found for logger (org.apache.http.client.protocol.RequestAddCookies).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.88 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 35.790s
+[INFO] Finished at: Wed Sep 23 23:35:39 IST 2015
+[INFO] Final Memory: 18M/47M
+[INFO] ------------------------------------------------------------------------
