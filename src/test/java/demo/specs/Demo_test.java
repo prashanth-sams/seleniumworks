@@ -28,6 +28,8 @@ public class Demo_test extends BaseController  {
 		Assert.assertEquals("Welcome", title);				
 		try {
 			Assert.assertEquals("We're passionate about tea. ", header);
+//			Assert.assertEquals(repo.getProperty(WelcomePage_Title), header);		
+			
 		} catch (Error e) {
 			System.out.println("Error in displaying Header");		
 		} catch (Exception e) {

@@ -1,5 +1,5 @@
 package org.seleniumworks.utilities;
 
-public class SeleniumAPIs {
+public class DriverFactory {
 
 }
