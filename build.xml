@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="automation" default="Run" basedir=".">
  <property name="src.dir" value="${basedir}/src"/>
- <property name="build.dir" value="${basedir}/build"/>
- <property name="testng_xslt_output.dir" value="${basedir}/testng_xslt_output"/>
+ <property name="build.dir" value="${basedir}/reports/ant/build"/>
+ <property name="testng_output.dir" value="${basedir}/reports/ant/testng_output"/>
+ <property name="testng-xslt-reportng-output.dir" value="${basedir}/reports/ant/testng-xslt-reportng-output"/>
  
  <!-- get class path, used for build -->
  <property name="lib.dir" value="${basedir}/lib"/>
  <path id="classpath">
   <fileset dir="${lib.dir}" includes="*.jar"/>
-  <pathelement location="build"/>
+  <pathelement location="reports/ant/build"/>
  </path>
  
- <!-- create build folder, testng_xslt_output folder and remove old log file -->
+ <!-- create build folder, testng_output folder and remove old log file -->
  <target name="init">
-  <delete dir="${build.dir}"/>
-  <delete dir="${testng_xslt_output}"/>
-  <delete dir="${basedir}/testng-xslt"/>
+  <delete dir="${build.dir}"/>  
+  <delete dir="${testng_output.dir}"/>
+  <delete dir="${testng-xslt-reportng-output.dir}"/>
   <mkdir dir="${build.dir}"/>
-  <mkdir dir="${basedir}/testng-xslt"/>
-  <mkdir dir="${testng_xslt_output.dir}"/>
-        
+  <mkdir dir="${testng_output.dir}"/>
+  <mkdir dir="${testng-xslt-reportng-output.dir}"/>
+  
+
  </target>
  
  <!-- build all java file to class binary -->
  <target name="compile" depends="init">
-     <javac srcdir="${basedir}/src" destdir="${basedir}/build" classpathref="classpath" includeantruntime="false">
+     <javac srcdir="${basedir}/src" destdir="${basedir}/reports/ant/build" classpathref="classpath" includeantruntime="false">
       <compilerarg value="-Xlint:unchecked"/>
     </javac> 
  </target>
@@ -41,10 +43,10 @@
  <target name ="Run" depends="compile">
 
    <!-- config testng -->
-     <testng outputdir="${testng_xslt_output.dir}" classpathref="classpath" useDefaultListeners="true">
+     <testng outputdir="${testng_output.dir}" classpathref="classpath" useDefaultListeners="true">
 
        <!-- execute testcase follow testng.xml -->
-      <xmlfileset dir="." includes="${basedir}/src/test/resources/testng.xml"/>
+     	<xmlfileset dir="." includes="src/test/resources/testng.xml"/>
       
       <!-- generate report title -->
       <sysproperty key="org.uncommons.reportng.title" value="Test Automation"/>
@@ -54,9 +56,9 @@
     
  <target name="xslt" depends="Run">
                  
-     <xslt in="${basedir}/testng_xslt_output/testng-results.xml" style="${basedir}/testng-results.xsl" out="${basedir}/testng-xslt/index.html" processor="SaxonLiaison">
+     <xslt in="${basedir}/reports/ant/testng_output/testng-results.xml" style="${basedir}/src/test/resources/testng-results.xsl" out="${basedir}/reports/ant/testng-xslt-reportng-output/index.html" processor="SaxonLiaison">
                         
-            <param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir" />
+            <param expression="${testng-xslt-reportng-output.dir}" name="testNgXslt.outputDir" />
 
             <param expression="true" name="testNgXslt.sortTestCaseLinks" />
 

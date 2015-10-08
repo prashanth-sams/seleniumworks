@@ -1,0 +1,1 @@
+helpers\build-ant.bat >src\test\logs\ant_log.txt

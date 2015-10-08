@@ -11,9 +11,17 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>			
 	</properties>
 
+	<profiles>
+		<profile>
+			<id>MavenTarget</id>
+			<build>
+				<directory>reports/maven</directory>
+			</build>
+		</profile>
+	</profiles>
 
 	<build>
 		<plugins>
@@ -91,12 +99,8 @@
 			<version>1.1.4</version>
 		</dependency>
 
-<!-- 		<dependency>
-			<groupId>LIB_NAME</groupId>
-			<artifactId>LIB_NAME</artifactId>
-			<version>1.0.0</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/WebContent/WEB-INF/lib/YOUR_LIB.jar</systemPath>
-		</dependency> -->
+		<!-- <dependency> <groupId>LIB_NAME</groupId> <artifactId>LIB_NAME</artifactId> 
+			<version>1.0.0</version> <scope>system</scope> <systemPath>${basedir}/WebContent/WEB-INF/lib/YOUR_LIB.jar</systemPath> 
+			</dependency> -->
 	</dependencies>
 </project>

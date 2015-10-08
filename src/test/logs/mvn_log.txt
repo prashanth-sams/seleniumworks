@@ -1,0 +1,48 @@
+
+D:\SeleniumWorks\workspace_git\seleniumworks>call mvn clean test -PMavenTarget 
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building seleniumworks 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[WARNING] The POM for org.testng:testng:jar:5.14.3 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.testng:testng:jar:5.14.4 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[WARNING] The POM for org.testng:testng:jar:5.14.5 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ seleniumworks ---
+[INFO] Deleting D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ seleniumworks ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\SeleniumWorks\workspace_git\seleniumworks\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ seleniumworks ---
+[INFO] Compiling 1 source file to D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ seleniumworks ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ seleniumworks ---
+[INFO] Compiling 17 source files to D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.2:test (default-test) @ seleniumworks ---
+[INFO] Surefire report directory: D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 50.411 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 58.952s
+[INFO] Finished at: Thu Oct 08 21:33:32 IST 2015
+[INFO] Final Memory: 20M/54M
+[INFO] ------------------------------------------------------------------------
