@@ -1,0 +1,1 @@
+helpers\build-mvn.bat >src\test\logs\mvn_log.txt
