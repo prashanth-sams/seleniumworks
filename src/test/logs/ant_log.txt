@@ -4,10 +4,10 @@ Buildfile: D:\SeleniumWorks\workspace_git\seleniumworks\build.xml
 
 init:
    [delete] Deleting directory D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\build
-   [delete] Deleting directory D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng_output
+   [delete] Deleting directory D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-output
    [delete] Deleting directory D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-xslt-reportng-output
     [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\build
-    [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng_output
+    [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-output
     [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-xslt-reportng-output
 
 compile:
@@ -24,8 +24,12 @@ Run:
    [testng] ===============================================
    [testng] 
 
+Timestamp:
+    [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-09 [12.58 57]
+     [copy] Copying 28 files to D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-09 [12.58 57]
+
 xslt:
-     [xslt] Processing D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng_output\testng-results.xml to D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-xslt-reportng-output\index.html
+     [xslt] Processing D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-output\testng-results.xml to D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-xslt-reportng-output\index.html
      [xslt] Loading stylesheet D:\SeleniumWorks\workspace_git\seleniumworks\src\test\resources\testng-results.xsl
 
 BUILD SUCCESSFUL
