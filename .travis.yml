@@ -11,4 +11,4 @@ notifications:
   email:
   - seleniumworks@gmail.com
 script:
-  - ant afasdfjdasfjsald
+  - ant xslt
