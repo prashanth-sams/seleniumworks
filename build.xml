@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="automation" default="Run" basedir=".">
+<project name="automation" default="Run" basedir="."> 
  <property name="src.dir" value="${basedir}/src"/>
  <property name="build.dir" value="${basedir}/reports/ant/build"/>
  <property name="testng-output.dir" value="${basedir}/reports/ant/testng-output"/>
  <property name="testng-xslt-reportng-output.dir" value="${basedir}/reports/ant/testng-xslt-reportng-output"/>
+ <property name="mail.dir" value="${basedir}/reports/ant/mail"/>
 	
 <!--
  <property name="mail_body_file" value="${basedir}/email_body.txt"/>
@@ -89,7 +90,8 @@
 	    <fileset dir="${basedir}/reports/ant/testng-output">
 	      <include name="**/*.*"/>
 	    </fileset>
-	   </copy>	 
+	   </copy>	   
+		
 	</target>
 	
 	
@@ -108,11 +110,36 @@
             <classpath refid="master-classpath">
             </classpath>
         </xslt>
+ 	</target>
+ 	
+	<target name="email-xslt" depends="xslt">
+    	
+		<delete dir="${mail.dir}"/>
+    	<mkdir dir="${mail.dir}"/>
+    	<zip destfile="${mail.dir}/xslt-report.zip" basedir="${testng-xslt-reportng-output.dir}"/>
+	    
+ 		<!-- To send e-mails from Gmail acc,  mailhost: smtp.gmail.com  port: 465-->
+        <mail
+    		tolist="sams.prashanth@gmail.com,seleniumworks@gmail.com"
+		    from="sams.prashanth@yahoo.com"
+		    cclist= "prashanthsamuels@gmail.com"
+	    	subject="Demo project - Smoke results"
+	    	mailhost="smtp.mail.yahoo.com"
+	    	mailport="465"
+	    	ssl="true"
+	    	user="sams.prashanth@yahoo.com"
+	    	password="************">
+       	
+    	 <attachments>
+			<fileset dir="${mail.dir}">
+				<include name="*.zip"/>
+			</fileset>
+		 </attachments>
+       	
+	    </mail>
+ 	
     </target>
 
-
-	
-	
 <!--
 	<target name="start" depends="xslt">
 	    <tstamp prefix="getTime">
