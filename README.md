@@ -5,7 +5,7 @@
 
 A complete selenium automation framework.   
 
-![](https://s3.amazonaws.com/f.cl.ly/items/0J33033R0c453w0Q3i3H/HD-seleniumworks.png)
+![](https://s3.amazonaws.com/f.cl.ly/items/0g0B3s1D1x1F1S1A3x3D/seleniumworksHD.png)
 
 
 #### Release Notes
