@@ -1,0 +1,15 @@
+language: java
+install: ant deps
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+  - openjdk7
+  - openjdk6
+branches:
+  only:
+  - UAT
+notifications:
+  email:
+  - seleniumworks@gmail.com
+script:
+  - ant xslt
