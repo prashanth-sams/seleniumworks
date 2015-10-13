@@ -1,5 +1,5 @@
 
-D:\SeleniumWorks\workspace_git\seleniumworks>ant xslt 
+D:\SeleniumWorks\workspace_git\seleniumworks>ant email-xslt 
 Buildfile: D:\SeleniumWorks\workspace_git\seleniumworks\build.xml
 
 init:
@@ -25,12 +25,19 @@ Run:
    [testng] 
 
 Timestamp:
-    [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-12 [10.57 42]
-     [copy] Copying 28 files to D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-12 [10.57 42]
+    [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-12 [13.11 17]
+     [copy] Copying 28 files to D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-12 [13.11 17]
 
 xslt:
      [xslt] Processing D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-output\testng-results.xml to D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-xslt-reportng-output\index.html
      [xslt] Loading stylesheet D:\SeleniumWorks\workspace_git\seleniumworks\src\test\resources\testng-results.xsl
 
+email-xslt:
+   [delete] Deleting directory D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\mail
+    [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\mail
+      [zip] Building zip: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\mail\xslt-report.zip
+     [mail] Sending email: Demo project - Smoke results
+     [mail] Sent email with 1 attachment
+
 BUILD SUCCESSFUL
-Total time: 3 minutes 15 seconds
+Total time: 48 seconds

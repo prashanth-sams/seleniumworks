@@ -1,13 +1,10 @@
 machine:
   java:
-    version: openjdk7 
-	
+    version: openjdk7
 general:
   branches:
     only:
       - UAT
-  
 test:
   override:
 	- mvn test
-	
