@@ -7,4 +7,4 @@ general:
       - UAT
 test:
   override:
-	- mvn test
+    - mvn test
