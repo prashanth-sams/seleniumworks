@@ -6,14 +6,15 @@ D:\SeleniumWorks\workspace_git\seleniumworks>call mvn clean -PMavenClean
 [INFO] Building seleniumworks 0.0.1-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ seleniumworks ---
+[INFO] --- maven-clean-plugin:2.6.1:clean (default-clean) @ seleniumworks ---
 [INFO] Deleting D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\classes
 [INFO] Deleting D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\test-classes
+[INFO] Deleting D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\mail (includes = [**/*], excludes = [])
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 0.853s
-[INFO] Finished at: Fri Oct 09 14:25:18 IST 2015
+[INFO] Total time: 2.128s
+[INFO] Finished at: Wed Oct 14 16:04:28 IST 2015
 [INFO] Final Memory: 3M/15M
 [INFO] ------------------------------------------------------------------------
 [INFO] Scanning for projects...
@@ -34,9 +35,9 @@ D:\SeleniumWorks\workspace_git\seleniumworks>call mvn clean -PMavenClean
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 4.869s
-[INFO] Finished at: Fri Oct 09 14:25:26 IST 2015
-[INFO] Final Memory: 13M/31M
+[INFO] Total time: 11.307s
+[INFO] Finished at: Wed Oct 14 16:04:43 IST 2015
+[INFO] Final Memory: 12M/31M
 [INFO] ------------------------------------------------------------------------
 [INFO] Scanning for projects...
 [INFO]                                                                         
@@ -62,22 +63,30 @@ D:\SeleniumWorks\workspace_git\seleniumworks>call mvn clean -PMavenClean
 [INFO] Compiling 17 source files to D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\test-classes
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.12.2:test (default-test) @ seleniumworks ---
-[INFO] Surefire report directory: D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\archieve\2015-10-09 [14.25 30]
+[INFO] Surefire report directory: D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\mail
 
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
 Running TestSuite
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.3 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 54.771 sec
 
 Results :
 
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 
+[INFO] 
+[INFO] --- maven-postman-plugin:0.1.6:send-mail (send_an_email) @ seleniumworks ---
+[INFO] add attachment D:\SeleniumWorks\workspace_git\seleniumworks\reports\maven\mail\html\index.html
+[INFO] configure SSL connection for mail
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:copy-resources (copy-resources) @ seleniumworks ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 38 resources
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1:08.238s
-[INFO] Finished at: Fri Oct 09 14:26:38 IST 2015
-[INFO] Final Memory: 14M/34M
+[INFO] Total time: 1:33.496s
+[INFO] Finished at: Wed Oct 14 16:06:20 IST 2015
+[INFO] Final Memory: 14M/35M
 [INFO] ------------------------------------------------------------------------

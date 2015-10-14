@@ -80,7 +80,7 @@ public class Listeners implements WebDriverEventListener {
         File scrFile = ((TakesScreenshot)webDriver)
                 .getScreenshotAs(OutputType.FILE);
         try {
-            org.apache.commons.io.FileUtils.copyFile(scrFile, new File("C:\\Testfailure.jpeg"));
+            org.apache.commons.io.FileUtils.copyFile(scrFile, new File("\\src\\test\\logs\\Testfailure.jpg"));
         } catch (Exception e) {
             System.out.println("Unable to Save");
         }
