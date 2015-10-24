@@ -20,13 +20,13 @@
 		<profile>
 			<id>MavenTarget</id>
 			<build>
-				<directory>reports/maven</directory>				
+				<directory>reports/maven</directory>
 			</build>
 		</profile>
 		<profile>
 			<id>MavenClean</id>
 			<build>
-				<directory>reports/maven/*</directory>								
+				<directory>reports/maven/*</directory>
 			</build>
 		</profile>
 	</profiles>
@@ -36,6 +36,25 @@
 		<testOutputDirectory>reports/maven/test-classes</testOutputDirectory>
 		<plugins>
 			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.6.1</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${basedir}/reports/maven/mail</directory>
+							<includes>
+								<include>**/*</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+						<!-- <fileset> <directory>${basedir}/reports/maven/mail</directory> 
+							<includes> <include>**/*</include> </includes> <followSymlinks>false</followSymlinks> 
+							</fileset> -->
+					</filesets>
+				</configuration>
+			</plugin>
+
+			<plugin>
 				<inherited>true</inherited>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -44,20 +63,113 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.12.2</version>
 				<configuration>
-					<reportsDirectory>${basedir}/reports/maven/archieve/${timestamp}</reportsDirectory>
+					<reportsDirectory>${basedir}/reports/maven/mail</reportsDirectory>
 					<suiteXmlFiles>
 						<suiteXmlFile>${basedir}/src/test/resources/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<includes>
 						<include>**/*.java</include>
 					</includes>
+					<!-- <testFailureIgnore>true</testFailureIgnore> -->
+					<!-- <properties> <property> <name>listener</name> <value>test.invokedmethodlistener.MyListener</value> 
+						</property> </properties> -->
+
+					<!-- <properties> Setting ReportNG listeners <property> <name>listener</name> 
+						<value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value> 
+						</property> </properties> -->
 				</configuration>
 			</plugin>
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-assembly-plugin</artifactId> 
+				<version>2.4</version> <configuration> <descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef> 
+				</descriptorRefs> <descriptorRefs> <descriptorRef>helpers/zip.xml</descriptorRef> 
+				</descriptorRefs> <archive> <manifest> <mainClass>${main.class}</mainClass> 
+				</manifest> </archive> </configuration> </plugin> -->
+
+			<plugin>
+				<groupId>ch.fortysix</groupId>
+				<artifactId>maven-postman-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+				<version>0.1.6</version>
+				<executions>
+					<execution>
+						<id>send_an_email</id>
+						<phase>test</phase>
+						<goals>
+							<goal>send-mail</goal>
+						</goals>
+						<inherited>true</inherited>
+						<configuration>
+							<mailhost>smtp.mail.yahoo.com</mailhost>
+							<mailport>465</mailport>
+							<mailssl>true</mailssl>
+							<mailAltConfig>true</mailAltConfig>
+							<mailuser>seleniumworks_1@yahoo.com</mailuser>
+							<mailpassword>Selenium@2015</mailpassword>
+
+							<from>seleniumworks_1@yahoo.com</from>
+							<receivers>
+								<receiver>sams.prashanth@gmail.com</receiver>
+								<receiver>seleniumworks@gmail.com</receiver>
+							</receivers>
+
+							<subject>Demo project - Smoke results- New</subject>
+							<failonerror>false</failonerror>
+							<htmlMessage>
+										<![CDATA[
+											<p>New Build Arrived! </p><br>
+											<p>Check the smoke results from attachment :)</p>										
+										]]>
+							</htmlMessage>
+
+							<fileSets>
+								<fileSet>
+									<!-- <directory>${basedir}/reports/maven/mail</directory> -->
+									<directory>${basedir}/reports/maven/</directory>
+									<includes>
+										<!-- <include>*.zip</include> -->
+										<include>**/html/index.html</include>
+									</includes>
+								</fileSet>
+							</fileSets>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<!-- here the phase you need -->
+						<!-- <phase>validate</phase> -->
+						<phase>test</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/reports/maven/archieve/${timestamp}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/reports/maven/mail</directory>
+									<!-- <filtering>true</filtering> -->
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 
@@ -109,6 +221,12 @@
 			<artifactId>reportng</artifactId>
 			<version>1.1.4</version>
 		</dependency>
+		<dependency>
+			<groupId>velocity</groupId>
+			<artifactId>velocity-dep</artifactId>
+			<version>1.4</version>
+		</dependency>
+
 
 		<!-- <dependency> <groupId>LIB_NAME</groupId> <artifactId>LIB_NAME</artifactId> 
 			<version>1.0.0</version> <scope>system</scope> <systemPath>${basedir}/WebContent/WEB-INF/lib/YOUR_LIB.jar</systemPath> 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Parallel test suite]" parallel="tests">
+  <parameter name="browser" value="Firefox"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="Test on Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="demo.specs.Demo_test">
+        <methods>
+          <include name="stepUp"/>
+          <include name="Test01"/>
+          <include name="openBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- demo.specs.Demo_test -->
+    </classes>
+  </test> <!-- Test on Firefox(failed) -->
+</suite> <!-- Failed suite [Parallel test suite] -->

@@ -20,17 +20,18 @@ Run:
    [testng] 
    [testng] ===============================================
    [testng] Parallel test suite
-   [testng] Total tests run: 2, Failures: 0, Skips: 0
+   [testng] Total tests run: 2, Failures: 1, Skips: 0
    [testng] ===============================================
    [testng] 
+   [testng] The tests failed.
 
 Timestamp:
-    [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-09 [12.58 57]
-     [copy] Copying 28 files to D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-09 [12.58 57]
+    [mkdir] Created dir: D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-14 [12.52 48]
+     [copy] Copying 38 files to D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\archieve\2015-10-14 [12.52 48]
 
 xslt:
      [xslt] Processing D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-output\testng-results.xml to D:\SeleniumWorks\workspace_git\seleniumworks\reports\ant\testng-xslt-reportng-output\index.html
      [xslt] Loading stylesheet D:\SeleniumWorks\workspace_git\seleniumworks\src\test\resources\testng-results.xsl
 
 BUILD SUCCESSFUL
-Total time: 40 seconds
+Total time: 1 minute 45 seconds

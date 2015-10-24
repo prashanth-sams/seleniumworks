@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test on Firefox"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="10.484">
+  <properties />
+  
+  
+            <testcase name="Test02" time="10.218" classname="demo.specs.Demo_test" />
+                <testcase name="Test01" time="0.266" classname="demo.specs.Demo_test" />
+      
+</testsuite>

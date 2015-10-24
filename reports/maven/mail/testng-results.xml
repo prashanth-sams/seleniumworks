@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Parallel test suite" duration-ms="53095" started-at="2015-10-24T07:30:40Z" finished-at="2015-10-24T07:31:34Z">
+    <groups>
+    </groups>
+    <test name="Test on Firefox" duration-ms="53095" started-at="2015-10-24T07:30:40Z" finished-at="2015-10-24T07:31:34Z">
+      <class name="demo.specs.Demo_test">
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:demo.specs.Demo_test@bf47df]" name="openBrowser" is-config="true" duration-ms="12397" started-at="2015-10-24T13:00:40Z" finished-at="2015-10-24T13:00:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="stepUp()[pri:0, instance:demo.specs.Demo_test@bf47df]" name="stepUp" is-config="true" duration-ms="26016" started-at="2015-10-24T13:00:53Z" finished-at="2015-10-24T13:01:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stepUp -->
+        <test-method status="PASS" signature="Test01()[pri:0, instance:demo.specs.Demo_test@bf47df]" name="Test01" duration-ms="266" started-at="2015-10-24T13:01:19Z" description="Check Welcome Page for Title and contents" finished-at="2015-10-24T13:01:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test01 -->
+        <test-method status="PASS" signature="stepUp()[pri:0, instance:demo.specs.Demo_test@bf47df]" name="stepUp" is-config="true" duration-ms="2347" started-at="2015-10-24T13:01:19Z" finished-at="2015-10-24T13:01:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stepUp -->
+        <test-method status="PASS" signature="Test02()[pri:0, instance:demo.specs.Demo_test@bf47df]" name="Test02" duration-ms="10218" started-at="2015-10-24T13:01:22Z" description="Check Herbal-Tea collections" finished-at="2015-10-24T13:01:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test02 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:demo.specs.Demo_test@bf47df]" name="tearDown" is-config="true" duration-ms="1711" started-at="2015-10-24T13:01:32Z" finished-at="2015-10-24T13:01:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- demo.specs.Demo_test -->
+    </test> <!-- Test on Firefox -->
+  </suite> <!-- Parallel test suite -->
+</testng-results>
