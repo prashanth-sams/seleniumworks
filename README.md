@@ -7,8 +7,11 @@
 
 A complete selenium automation framework.   
 
-![](https://s3.amazonaws.com/f.cl.ly/items/0m1C0C412Y3X1B3E3o27/seleniumworks_v.2.1.png)
+![](https://s3.amazonaws.com/f.cl.ly/items/1w2Z010N3h2z2p2k0t2B/seleniumworks%20v3.0.png)
 
 
 #### Release Notes
 https://github.com/prashanth-sams/seleniumworks/releases/
+
+#### Open Issues
+https://github.com/prashanth-sams/seleniumworks/issues/
