@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="4.059">
+           time="13.376">
   <properties />
   
   
-            <testcase name="Test02" time="3.417" classname="demo.specs.Demo_test" />
-                <testcase name="Test01" time="0.642" classname="demo.specs.Demo_test" />
+            <testcase name="Test01" time="0.970" classname="demo.specs.Demo_test" />
+                <testcase name="Test02" time="12.406" classname="demo.specs.Demo_test" />
       
 </testsuite>
